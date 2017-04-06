@@ -15,13 +15,16 @@ How to build documentation
 **************************
 
 1. Make sure you have installed::
+
    Sphinx>=1.5.2
    guzzle_sphinx_theme
 
 2. Clean the repository::
+
    ./make.sh clean
 
 3. Rebuild documentation::
+
    ./make.sh html
 
 
