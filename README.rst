@@ -8,7 +8,22 @@ This is the Documentation project for `CODENERIX <https://github.com/centrologic
     :target: http://www.codenerix.com
     :alt: Try our demo with Centrologic Cloud
 
-You can get online access to the documentation at `CODENERIX Documentation <http://doc.codenerix.com>`_.
+****
+Demo
+****
+
+You can have a look to our `demo online <http://demo.codenerix.com>`_.
+
+*************
+Documentation
+*************
+
+We have tried to write the most accurate documentation about this project so you have enought information to feel confortable
+with `CODENERIX <http://www.codenerix.com/>`_. Nevertheless we are human, and we make mistakes, so please contact with us if
+you find any mistake or you have doubts about the explanations.
+
+You can get access to the documentation at `CODENERIX Documentation <http://doc.codenerix.com>`_.
+
 
 **************************
 How to build documentation
