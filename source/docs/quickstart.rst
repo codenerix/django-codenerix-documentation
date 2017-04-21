@@ -19,7 +19,7 @@ Quickstart
 
 .. code:: console
 
-    cd django-codenerix-examples/**agenda**/
+    cd django-codenerix-examples/agenda/
 
 5. Install all requirements for the choosen example::
 
