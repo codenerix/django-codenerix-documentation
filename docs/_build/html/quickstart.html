@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Quickstart &#8212; CODENERIX 20161221001 documentation</title>
+    
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/banner.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '20161221001',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Library Reference" href="libraryreference.html" />
+    <link rel="prev" title="Welcome to CODENERIX’s documentation!" href="index.html" />
+  
+   
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="libraryreference.html" title="Library Reference"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to CODENERIX’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">CODENERIX 20161221001 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#adding-code">Adding code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraryreference.html">Library Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Settings</a></li>
+</ul>
+
+    
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">Quickstart</a></li>
+<li><a class="reference internal" href="#adding-code">Adding code</a><ul>
+<li><a class="reference internal" href="#start-and-configure">0. Start and configure</a></li>
+<li><a class="reference internal" href="#create-a-model">1. Create a model</a></li>
+<li><a class="reference internal" href="#create-a-form">2. Create a form</a></li>
+<li><a class="reference internal" href="#create-views">3. Create views</a></li>
+<li><a class="reference internal" href="#urls">4. Urls</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+<h3>Versions</h3>
+<ul>
+    <li><a href="master/quickstart.html">master</a></li>
+</ul>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+              <li>Quickstart</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>Install your Linux (we checked it out on Debian 8.7)</li>
+<li>Make sure you have installed the required packages to work with GIT and Python:</li>
+</ol>
+<div class="code console highlight-default"><div class="highlight"><pre><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">git</span> <span class="n">python</span><span class="o">-</span><span class="n">pip</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>Clone the <a class="reference external" href="https://github.com/centrologic/django-codenerix-examples">CODENERIX Examples</a> project:</li>
+</ol>
+<div class="code console highlight-default"><div class="highlight"><pre><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">centrologic</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">codenerix</span><span class="o">-</span><span class="n">examples</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li>Go to the desired folder (we will go to <strong>agenda</strong>):</li>
+</ol>
+<div class="code console highlight-default"><div class="highlight"><pre><span class="n">cd</span> <span class="n">django</span><span class="o">-</span><span class="n">codenerix</span><span class="o">-</span><span class="n">examples</span><span class="o">/**</span><span class="n">agenda</span><span class="o">**/</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li>Install all requirements for the choosen example:</li>
+</ol>
+<div class="code console highlight-default"><div class="highlight"><pre><span class="n">For</span> <span class="n">python</span> <span class="mi">2</span><span class="p">:</span> <span class="n">sudo</span> <span class="n">pip2</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">For</span> <span class="n">python</span> <span class="mi">3</span><span class="p">:</span> <span class="n">sudo</span> <span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li>That&#8217;s all...check it out:</li>
+</ol>
+<div class="code console highlight-default"><div class="highlight"><pre><span class="n">In</span> <span class="n">python</span> <span class="mi">2</span><span class="p">:</span> <span class="n">python2</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
+<span class="n">In</span> <span class="n">python</span> <span class="mi">3</span><span class="p">:</span> <span class="n">python3</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-code">
+<h1>Adding code<a class="headerlink" href="#adding-code" title="Permalink to this headline">¶</a></h1>
+<p>From here we will be improving the basic example with new models, views, etc...</p>
+<div class="section" id="start-and-configure">
+<h2>0. Start and configure<a class="headerlink" href="#start-and-configure" title="Permalink to this headline">¶</a></h2>
+<p>First step it&#8217;s to create a project and configure its settings.</p>
+<p>Follow this guide to set up a project from begin. We assume that you have sucessfully run the Quickstart.</p>
+<ul class="simple">
+<li>Execute the Django command startproject to create a new project named <em>librarymanager</em>.</li>
+</ul>
+<div class="code console highlight-default"><div class="highlight"><pre><span class="n">django</span><span class="o">-</span><span class="n">admin</span> <span class="n">startproject</span> <span class="n">librarymanager</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Enter in the project folder and start a new app, in this case the app will be a Python package named <em>library</em> inside the project root.</li>
+</ul>
+<div class="code console highlight-default"><div class="highlight"><pre><span class="o">./</span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="n">library</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Now we have our project and app created. Next step is to configure the project editing the <em>settings.py</em> module. Let&#8217;s add your new app to INSTALLED_APPS.</li>
+</ul>
+<div class="code python highlight-default"><div class="highlight"><pre><span class="c"># Installed apps</span>
+<span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="o">...</span>
+    <span class="s">&#39;library&#39;</span><span class="p">,</span>   <span class="c"># Our app</span>
+    <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Following this step, you will have a basic Codenerix project ready to run with your new <strong>&#8216;library&#8217;</strong> app.</p>
+</div>
+<div class="section" id="create-a-model">
+<h2>1. Create a model<a class="headerlink" href="#create-a-model" title="Permalink to this headline">¶</a></h2>
+<div class="code python highlight-default"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">codenerix.models</span> <span class="k">import</span> <span class="n">CodenerixModel</span>
+<span class="kn">from</span> <span class="nn">django.db</span> <span class="k">import</span> <span class="n">models</span>
+
+<span class="k">class</span> <span class="nc">Author</span><span class="p">(</span><span class="n">CodenerixModel</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s">u&#39;Name&#39;</span><span class="p">),</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="k">False</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="k">False</span><span class="p">)</span>
+    <span class="n">birth_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s">u&#39;Fecha de nacimiento&#39;</span><span class="p">),</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="k">False</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="k">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__fields__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">info</span><span class="p">):</span>
+        <span class="n">fields</span><span class="o">=</span><span class="p">[]</span>
+        <span class="n">fields</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s">&#39;Name&#39;</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="s">&#39;left&#39;</span><span class="p">))</span>
+        <span class="n">fields</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s">&#39;birth_date&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s">&#39;Birth Date&#39;</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="n">fields</span>
+
+
+<span class="k">class</span> <span class="nc">Book</span><span class="p">(</span><span class="n">CodenerixModel</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s">u&#39;Name&#39;</span><span class="p">),</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="k">False</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="k">False</span><span class="p">)</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Author</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="k">False</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="k">False</span><span class="p">)</span>
+    <span class="n">isbn</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s">u&#39;ISBN&#39;</span><span class="p">),</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="k">False</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="k">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__fields__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">info</span><span class="p">):</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">fields</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s">&#39;Name&#39;</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="s">&#39;left&#39;</span><span class="p">))</span>
+        <span class="n">fields</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s">&#39;isbn&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s">&#39;ISBN&#39;</span><span class="p">)))</span>
+        <span class="n">fields</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s">&#39;author&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s">&#39;Author&#39;</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="n">fields</span>
+</pre></div>
+</div>
+<p>The first step to start coding a Django project is create data models. In this case we will make two Models as showed above, Author and Book, both inheriting from the base class <a class="reference internal" href="models/codenerixmodel.html#class-codenerixmodel"><span class="std std-ref">CodenerixModel</span></a>. The structure is simple, we declare all fields (as in Django) and then the method __fields__. This method is mandatory because is needed by Codenerix to define which fields are shown and in which order.</p>
+</div>
+<div class="section" id="create-a-form">
+<h2>2. Create a form<a class="headerlink" href="#create-a-form" title="Permalink to this headline">¶</a></h2>
+<div class="code python highlight-default"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">codenerix.forms</span> <span class="k">import</span> <span class="n">GenModelForm</span>
+
+<span class="k">class</span> <span class="nc">BookForm</span><span class="p">(</span><span class="n">GenModelForm</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Book</span>
+    <span class="n">exclude</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">__groups__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">groups</span> <span class="o">=</span> <span class="p">[(</span><span class="n">_</span><span class="p">(</span><span class="s">&#39;Book&#39;</span><span class="p">),</span> <span class="mi">12</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="s">&#39;isbn&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="s">&#39;author&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">])]</span>
+        <span class="k">return</span> <span class="n">groups</span>
+
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__groups_details__</span><span class="p">():</span>
+        <span class="n">details</span> <span class="o">=</span> <span class="p">[(</span><span class="n">_</span><span class="p">(</span><span class="s">&#39;Book&#39;</span><span class="p">),</span> <span class="mi">12</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;name&#39;</span> <span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="s">&#39;isbn&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="s">&#39;author&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">])]</span>
+        <span class="k">return</span> <span class="n">details</span>
+
+
+<span class="k">class</span> <span class="nc">AuthorForm</span><span class="p">(</span><span class="n">GenModelForm</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Author</span>
+    <span class="n">exclude</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">__groups__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">groups</span> <span class="o">=</span> <span class="p">[(</span><span class="n">_</span><span class="p">(</span><span class="s">&#39;Author&#39;</span><span class="p">),</span> <span class="mi">12</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="s">&#39;birth_date&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">])]</span>
+        <span class="k">return</span> <span class="n">groups</span>
+
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__groups_details__</span><span class="p">():</span>
+        <span class="n">details</span> <span class="o">=</span> <span class="p">[(</span><span class="n">_</span><span class="p">(</span><span class="s">&#39;Author&#39;</span><span class="p">),</span> <span class="mi">12</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="s">&#39;birth_date&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">])]</span>
+        <span class="k">return</span> <span class="n">details</span>
+</pre></div>
+</div>
+<p>The second step is to create a form. In our example we are creating two forms, one for the Book model and another for the Author model. In addition, both forms have implemented the static method <strong>__groups_details__</strong>. This method is important because we will use them in <a class="reference internal" href="views/gendetail.html#class-gendetail"><span class="std std-ref">GenDetail and GenDetailModal</span></a> to layout its representation.</p>
+</div>
+<div class="section" id="create-views">
+<h2>3. Create views<a class="headerlink" href="#create-views" title="Permalink to this headline">¶</a></h2>
+<div class="code python highlight-default"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">codenerix.views</span> <span class="k">import</span> <span class="n">GenList</span><span class="p">,</span> <span class="n">GenCreate</span><span class="p">,</span> <span class="n">GenCreateModal</span><span class="p">,</span> <span class="n">GenUpdate</span><span class="p">,</span> <span class="n">GenUpdateModal</span><span class="p">,</span> <span class="n">GenDelete</span>
+<span class="kn">from</span> <span class="nn">library.forms</span> <span class="k">import</span> <span class="n">AuthorForm</span>
+
+
+<span class="k">class</span> <span class="nc">AuthorList</span><span class="p">(</span><span class="n">GenList</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Author</span>
+    <span class="n">show_details</span> <span class="o">=</span> <span class="k">True</span>
+
+
+<span class="k">class</span> <span class="nc">AuthorCreate</span><span class="p">(</span><span class="n">GenCreate</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Author</span>
+    <span class="n">form_class</span> <span class="o">=</span> <span class="n">AuthorForm</span>
+
+
+<span class="k">class</span> <span class="nc">AuthorCreateModal</span><span class="p">(</span><span class="n">GenCreateModal</span><span class="p">,</span> <span class="n">AuthorCreate</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">AuthorUpdate</span><span class="p">(</span><span class="n">GenUpdate</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Author</span>
+    <span class="n">form_class</span> <span class="o">=</span> <span class="n">AuthorForm</span>
+
+
+<span class="k">class</span> <span class="nc">AuthorUpdateModal</span><span class="p">(</span><span class="n">GenUpdateModal</span><span class="p">,</span> <span class="n">AuthorUpdate</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">AuthorDelete</span><span class="p">(</span><span class="n">GenDelete</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Author</span>
+
+
+<span class="k">class</span> <span class="nc">AuthorDetails</span><span class="p">(</span><span class="n">GenDetail</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Author</span>
+    <span class="n">groups</span> <span class="o">=</span> <span class="n">AuthorForm</span><span class="o">.</span><span class="n">__groups_details__</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">AuthorDetailModal</span><span class="p">(</span><span class="n">GenDetailModal</span><span class="p">,</span> <span class="n">AuthorDetails</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">BookList</span><span class="p">(</span><span class="n">GenList</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Book</span>
+    <span class="n">show_details</span> <span class="o">=</span> <span class="k">True</span>
+
+
+<span class="k">class</span> <span class="nc">BookCreate</span><span class="p">(</span><span class="n">GenCreate</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Book</span>
+    <span class="n">form_class</span> <span class="o">=</span> <span class="n">BookForm</span>
+
+
+<span class="k">class</span> <span class="nc">BookCreateModal</span><span class="p">(</span><span class="n">GenCreateModal</span><span class="p">,</span> <span class="n">BookCreate</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">BookUpdate</span><span class="p">(</span><span class="n">GenUpdate</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Book</span>
+    <span class="n">form_class</span> <span class="o">=</span> <span class="n">BookForm</span>
+
+
+<span class="k">class</span> <span class="nc">BookUpdateModal</span><span class="p">(</span><span class="n">GenUpdateModal</span><span class="p">,</span> <span class="n">BookUpdate</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">BookDelete</span><span class="p">(</span><span class="n">GenDelete</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Book</span>
+
+
+<span class="k">class</span> <span class="nc">BookDetails</span><span class="p">(</span><span class="n">GenDetail</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Book</span>
+    <span class="n">groups</span> <span class="o">=</span> <span class="n">BookForm</span><span class="o">.</span><span class="n">__groups_details__</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">BookDetailModal</span><span class="p">(</span><span class="n">GenDetailModal</span><span class="p">,</span> <span class="n">BookDetails</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>The third step is to create the views. A basic view don&#8217;t need to associated to any html template, generation will be automatically accomplished by Codenerix.</p>
+</div>
+<div class="section" id="urls">
+<h2>4. Urls<a class="headerlink" href="#urls" title="Permalink to this headline">¶</a></h2>
+<div class="code python highlight-default"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="k">import</span> <span class="n">url</span>
+<span class="kn">from</span> <span class="nn">library</span> <span class="k">import</span> <span class="n">views</span>
+
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^book$&#39;</span><span class="p">,</span><span class="n">views</span><span class="o">.</span><span class="n">BookList</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;book_list&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^book/add$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">BookCreate</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;book_add&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^book/addmodal$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">BookCreateModal</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;book_addmodal&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^book/(?P&lt;pk&gt;\w+)$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">BookDetail</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;book_detail&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^book/(?P&lt;pk&gt;\w+)/edit$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">BookUpdate</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;book_edit&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^book/(?P&lt;pk&gt;\w+)/editmodal$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">BookUpdateModal</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;book_editmodal&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^book/(?P&lt;pk&gt;\w+)/delete$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">BookDelete</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;book_delete&#39;</span><span class="p">),</span>
+
+
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^author$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">AuthorList</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;author_list&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^author/add$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">AuthorCreate</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;author_add&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^author/addmodal$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">AuthorCreateModal</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;author_addmodal&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^author/(?P&lt;pk&gt;\w+)$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">AuthorDetail</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;author_detail&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^author/(?P&lt;pk&gt;\w+)/edit$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">AuthorUpdate</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;author_edit&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^author/(?P&lt;pk&gt;\w+)/editmodal$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">AuthorUpdateModal</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;author_editmodal&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^author/(?P&lt;pk&gt;\w+)/delete$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">AuthorDelete</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;author_delete&#39;</span><span class="p">),</span>
+
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>The last step is to associate the urls with the views using the Django routing system. The example from above shows the prefered naming conventions proposed by Codenerix.</p>
+<p>Finally, we have a project ready to be tested using the Django development server.</p>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="index.html" title="previous chapter (use the left arrow)">Welcome to CODENERIX&#8217;s documentation!</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="libraryreference.html" title="next chapter (use the right arrow)">Library Reference</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="libraryreference.html" title="Library Reference"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to CODENERIX’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">CODENERIX 20161221001 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        <span>
+            <img src="http://www.centrologic.com/wp-content/uploads/2015/09/logo-centrologic.png" alt="Centrologic Software" title="Centrologic Software" width='200px'>
+            - <a href="http://www.centrologic.com">http://www.centrologic.com</a> - info@centrologic.com
+        </span>
+        <span class="creativecommons">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+                <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+            </a>
+            <br />
+            This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+                Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+            </a>.
+        </span>
+    </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-10297137-20', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
