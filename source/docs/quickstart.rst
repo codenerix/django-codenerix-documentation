@@ -1,8 +1,46 @@
 Quickstart
 ==========
 
+1. Install your Linux (we checked it out on Debian 8.7)
 
-Here we start a new basic project in Codenerix, explaining all necessary steps from configuration to simple deployment.
+2. Make sure you have installed the required packages to work with GIT and Python::
+
+.. code:: console
+
+    apt-get install git python-pip python3-pip
+
+3. Clone the `CODENERIX Examples <https://github.com/centrologic/django-codenerix-examples>`_ project::
+
+.. code:: console
+
+    git clone https://github.com/centrologic/django-codenerix-examples
+
+4. Go to the desired folder (we will go to **agenda**)::
+
+.. code:: console
+
+    cd django-codenerix-examples/**agenda**/
+
+5. Install all requirements for the choosen example::
+
+.. code:: console
+
+    For python 2: sudo pip2 install -r requirements.txt
+    For python 3: sudo pip3 install -r requirements.txt
+
+6. That's all...check it out::
+
+.. code:: console
+
+    In python 2: python2 manage.py runserver
+    In python 3: python3 manage.py runserver
+
+
+Adding code
+===========
+
+
+From here we will be improving the basic example with new models, views, etc...
 
 
 0. Start and configure
@@ -10,7 +48,7 @@ Here we start a new basic project in Codenerix, explaining all necessary steps f
 
 First step it's to create a project and configure its settings.
 
-Follow this guide to set up a project from begin. We assume that you have Python (>=2.7) and Django (>=1.10) installed.
+Follow this guide to set up a project from begin. We assume that you have sucessfully run the Quickstart.
 
 -  Execute the Django command startproject to create a new project named *librarymanager*.
 
@@ -26,132 +64,19 @@ Follow this guide to set up a project from begin. We assume that you have Python
     ./manage.py startapp library
 
 
--  Now we have our project and app created. Next step is to configure the project editing the *settings.py* module.
+-  Now we have our project and app created. Next step is to configure the project editing the *settings.py* module. Let's add your new app to INSTALLED_APPS.
 
 .. code:: python
 
     # Installed apps
     INSTALLED_APPS = [
-        'django.contrib.admin',
-        'django.contrib.auth',
-        'django.contrib.contenttypes',
-        'django.contrib.sessions',
-        'django.contrib.messages',
-        'django.contrib.staticfiles',
-
-        'codenerix', # Codenerix app
+        ...
         'library',   # Our app
-    ]
-
-    -  Add Codenerix authentication backends
-
-.. code:: python
-
-    AUTHENTICATION_BACKENDS=(
-        'codenerix.authbackend.TokenAuth',              # TokenAuth
-        'codenerix.authbackend.LimitedAuth',            # LimitedAuth
-    )
-
-    -  Add Codenerix templates context processors
-
-.. code:: python
-
-    # Templates
-    TEMPLATES = [
-        {
-            'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': [],
-            'APP_DIRS': True,
-            'OPTIONS': {
-                'context_processors': [
-                    'django.template.context_processors.debug',
-                    'django.template.context_processors.request',
-                    'django.contrib.auth.context_processors.auth',
-                    'django.contrib.messages.context_processors.messages',
-
-                    # Codenerix context processors
-                    'codenerix.context.codenerix',
-                    'codenerix.context.codenerix_js',
-                ],
-            },
-        },
+        ...
     ]
 
 
-    -  Add Codenerix middlewares
-
-.. code:: python
-
-    MIDDLEWARE = [
-        'django.middleware.security.SecurityMiddleware',
-        'django.contrib.sessions.middleware.SessionMiddleware',
-        'django.middleware.common.CommonMiddleware',
-        'django.middleware.csrf.CsrfViewMiddleware',
-        'django.contrib.auth.middleware.AuthenticationMiddleware',
-        'django.contrib.messages.middleware.MessageMiddleware',
-        'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-        #Codenerix middlewares
-        'codenerix.authbackend.TokenAuthMiddleware',
-        'codenerix.authbackend.LimitedAuthMiddleware',
-        'codenerix.middleware.SecureRequiredMiddleware',
-        'codenerix.middleware.CurrentUserMiddleware',
-    ]
-
-    -  Finally, add all Codenerix constants.
-
-.. code:: python
-
-    USERNAME_MIN_SIZE = 6
-    PASSWORD_MIN_SIZE = 8
-    ALARMS_LOOPTIME = 15000     # Refresh alarms every 15 seconds (15.000 miliseconds)
-    ALARMS_QUICKLOOP = 1000     # Refresh alarms every 1 seconds (1.000 miliseconds) when the system is on quick loop processing (without focus)
-    ALARMS_ERRORLOOP = 5000     # Refresh alarms every 5 seconds (5.000 miliseconds) when the http request fails
-    CONNECTION_ERROR = 60000    # Connection error after 60 seconds (60.000 miliseconds)
-    ALL_PAGESALLOWED = True
-
-    LIMIT_FOREIGNKEY = 25
-
-    CODENERIX_CSS = '<link href="/static/codenerix/codenerix.css" rel="stylesheet">'
-    CODENERIX_JS = '<script type="text/javascript" src="/static/codenerix/codenerix.js"></script>'
-    CODENERIX_JS += '<script type="text/javascript" src="/static/codenerix/codenerix.extra.js"></script>'
-
-    # Other definitions about dates, hours
-    DATETIME_FORMAT = 'Y-m-d H:i'
-
-    DATETIME_INPUT_FORMATS = ('%Y-%m-%d %H:%M',)
-
-    TIME_FORMAT = 'H:i'
-
-    TIME_INPUT_FORMATS = ('%H:%M', '%H%M')
-
-    DATETIME_RANGE_FORMAT = ('%Y-%m-%d', 'YYYY-MM-DD')
-
-    DATERANGEPICKER_OPTIONS = '{{'
-    DATERANGEPICKER_OPTIONS+= '    format: "{Format}",'
-    DATERANGEPICKER_OPTIONS+= '    timePicker: true,'
-    DATERANGEPICKER_OPTIONS+= '    timePicker12Hour: false,'
-    DATERANGEPICKER_OPTIONS+= '    showDropdowns: true,'
-    DATERANGEPICKER_OPTIONS+= '    locale: {{'
-    DATERANGEPICKER_OPTIONS+= '        firstDay: 1,'
-    DATERANGEPICKER_OPTIONS+= '        fromLabel: "{From}",'
-    DATERANGEPICKER_OPTIONS+= '        toLabel: "{To}",'
-    DATERANGEPICKER_OPTIONS+= '        applyLabel: "{Apply}",'
-    DATERANGEPICKER_OPTIONS+= '        cancelLabel: "{Cancel}",'
-    DATERANGEPICKER_OPTIONS+= '        daysOfWeek: ["{Su}", "{Mo}", "{Tu}", "{We}", "{Th}", "{Fr}", "{Sa}"],'
-    DATERANGEPICKER_OPTIONS+= '        monthNames: ["{January}", "{February}", "{March}", "{April}", "{May}", "{June}", "{July}", "{August}", "{September}", "{October}", "{November}", "{December}"],'
-    DATERANGEPICKER_OPTIONS+= '    }},'
-    DATERANGEPICKER_OPTIONS+= '}}'
-
-
--  Last step is to check all dependencies used by Codenerix using the following `manage.py` command. This step is critical to have a fully functional Codenerix application.
-
-.. code:: console
-
-    ./manage.py license c
-
-
-Following this step, you will have a basic Codenerix project ready to run.
+Following this step, you will have a basic Codenerix project ready to run with your new **'library'** app.
 
 
 1. Create a model
