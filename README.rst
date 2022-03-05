@@ -4,8 +4,8 @@ django-codenerix-documentation
 
 This is the Documentation project for `CODENERIX <https://github.com/codenerix/django-codenerix>`_.
 
-.. image:: http://www.codenerix.com/wp-content/uploads/2018/05/codenerix.png
-    :target: http://www.codenerix.com
+.. image:: https://github.com/codenerix/django-codenerix/raw/master/codenerix/static/codenerix/img/codenerix.png
+    :target: https://www.codenerix.com
     :alt: Try our demo with Codenerix Cloud
 
 ****
@@ -19,7 +19,7 @@ Documentation
 *************
 
 We have tried to write the most accurate documentation about this project so you have enought information to feel confortable
-with `CODENERIX <http://www.codenerix.com/>`_. Nevertheless we are human, and we make mistakes, so please contact with us if
+with `CODENERIX <https://www.codenerix.com/>`_. Nevertheless we are human, and we make mistakes, so please contact with us if
 you find any mistake or you have doubts about the explanations.
 
 You can get access to the documentation at `CODENERIX Documentation <http://doc.codenerix.com>`_.
