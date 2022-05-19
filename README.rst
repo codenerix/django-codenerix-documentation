@@ -24,7 +24,7 @@ you find any mistake or you have doubts about the explanations.
 
 You can get access to the documentation at `CODENERIX Documentation <http://doc.codenerix.com>`_.
 
-You can chat with us `here <https://goo.gl/NgpzBh>`_.
+You can get in touch with us `here <https://codenerix.com/contact/>`_.
 
 **************************
 How to build documentation
@@ -43,9 +43,3 @@ How to build documentation
 3. Rebuild documentation::
 
     ./make.sh html
-
-*******
-Credits
-*******
-
-This project has been possible thanks to `Centrologic <http://www.centrologic.com/>`_.
