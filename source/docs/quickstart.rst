@@ -86,11 +86,15 @@ Following this step, you will have a basic Codenerix project ready to run with y
 
     from codenerix.models import CodenerixModel
     from django.db import models
+    from django.utils.translation import gettext_lazy as _
 
     class Author(CodenerixModel):
-        name = models.CharField(_(u'Name'), max_length=128, blank=False, null=False)
-        birth_date = models.CharField(_(u'Fecha de nacimiento'), max_length=128, blank=False, null=False)
+        name = models.CharField(_('Name'), max_length=128, blank=False, null=False)
+        birth_date = models.CharField(_('Fecha de nacimiento'), max_length=128, blank=False, null=False)
         
+        def __str__(self):
+            return f'{self.name}'
+
         def __fields__(self, info):
             fields=[]
             fields.append(('name', _('Name'), 100, 'left'))
@@ -99,9 +103,12 @@ Following this step, you will have a basic Codenerix project ready to run with y
 
 
     class Book(CodenerixModel):
-        name = models.CharField(_(u'Name'), max_length=128, blank=False, null=False)
+        name = models.CharField(_('Name'), max_length=128, blank=False, null=False)
         author = models.ForeignKey(Author, max_length=128, blank=False, null=False)
-        isbn = models.CharField(_(u'ISBN'), max_length=128, blank=False, null=False)
+        isbn = models.CharField(_('ISBN'), max_length=128, blank=False, null=False)
+
+        def __str__(self):
+            return f'{self.name} ({self.isbn})'
 
         def __fields__(self,info):
             fields = []
@@ -119,7 +126,9 @@ The first step to start coding a Django project is create data models. In this c
 
 .. code:: python
 
+    from django.utils.translation import gettext_lazy as _
     from codenerix.forms import GenModelForm
+    from .models import Book, Author
 
     class BookForm(GenModelForm):
         model = Book
@@ -160,7 +169,8 @@ The second step is to create a form. In our example we are creating two forms, o
 .. code:: python
 
     from codenerix.views import GenList, GenCreate, GenCreateModal, GenUpdate, GenUpdateModal, GenDelete
-    from library.forms import AuthorForm 
+    from library.forms import AuthorForm, BookForm
+    from library.forms import Author, Book
 
 
     class AuthorList(GenList):
